@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Posts renders correctly 1`] = `
+<div
+  className="post"
+>
+  <div
+    className="post-title"
+  >
+    <h3>
+       #
+    </h3>
+    <button>
+      show post
+    </button>
+  </div>
+  <div
+    className="post-body"
+  >
+    <p />
+    <p>
+      Posted by user: 
+    </p>
+  </div>
+</div>
+`;

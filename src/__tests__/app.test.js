@@ -31,7 +31,7 @@ describe('App', () => {
             expect(spy).toHaveBeenCalledTimes(1);
         });
 
-        it('updates state `posts` with data', () => {
+        it('updates state `posts` with data and checks if it re-renders correctly', () => {
             return fetchData()
                 .then(res => {
                     expect(res).toBeDefined();
@@ -41,7 +41,18 @@ describe('App', () => {
                 .then(posts => {
                     app.setState({ posts })
                     expect(app.state().posts).toEqual(posts);
+                    expect(app.find('Post').exists()).toBe(true);
                 });
+        });
+    });
+
+    describe('render', () => {
+        it('render `Header` component', () => {
+            expect(app.find('Header').exists()).toBe(true);
+        });
+
+        it('renders `.all-posts` section', () => {
+            expect(app.find('.all-posts').children().length).toBeGreaterThanOrEqual(1)
         });
     });
 });

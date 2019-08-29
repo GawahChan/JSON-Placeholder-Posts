@@ -1,7 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App renders correctly 1`] = `
-<div>
-  My App
+<div
+  className="App"
+>
+  <div>
+    <h1>
+      Posts Page
+    </h1>
+  </div>
+  <div
+    className="all-posts"
+  >
+    <h1>
+      All posts
+    </h1>
+  </div>
 </div>
 `;
