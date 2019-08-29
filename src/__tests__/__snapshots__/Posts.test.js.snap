@@ -10,17 +10,12 @@ exports[`Posts renders correctly 1`] = `
     <h3>
        #
     </h3>
-    <button>
-      show post
+    <button
+      className="btn-showPosts"
+      onClick={[Function]}
+    >
+      Show post
     </button>
-  </div>
-  <div
-    className="post-body"
-  >
-    <p />
-    <p>
-      Posted by user: 
-    </p>
   </div>
 </div>
 `;

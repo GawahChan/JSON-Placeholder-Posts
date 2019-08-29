@@ -7,19 +7,25 @@ class Post extends Component {
             showPost: false
         }
     }
+    togglePosts = () => {
+        this.setState({ showPost: !this.state.showPost });
+    }
 
     render() {
-        const {userId, postTitle, postBody} = this.props;
+        const { userId, postTitle, postBody } = this.props;
         return (
             <div className='post'>
                 <div className='post-title'>
                     <h3>{postTitle} #{this.props.postId}</h3>
-                    <button>show post</button>
+                    <button className='btn-showPosts' onClick={this.togglePosts}>Show post</button>
                 </div>
-                <div className='post-body'>
-                    <p>{postBody}</p>
-                    <p>Posted by user: {userId}</p>
-                </div>
+                {
+                    this.state.showPost &&
+                    <div className='post-body'>
+                        <p>{postBody}</p>
+                        <p>Posted by user: {userId}</p>
+                    </div>
+                }
             </div>
         );
     }
