@@ -17,6 +17,14 @@ describe('App', () => {
         expect(app.state().posts).toEqual([]);
     });
 
+    it('initialises state `myPost` with an empty array', () => {
+        expect(app.state().myPost).toEqual([]);
+    });
+
+    it('initialises state `inputValue` with an empty string', () => {
+        expect(app.state().inputValue).toEqual('');
+    });
+
     describe('componentDidMount', () => {
         const spy = jest.spyOn(App.prototype, 'componentDidMount');
 
@@ -46,13 +54,28 @@ describe('App', () => {
         });
     });
 
+    // describe('filterPosts()', () => {
+
+    //     it('checks if function is defined', () => {
+    //         expect(app.instance().filterPosts).toBeDefined();
+    //     });
+
+    //     it('test,', () => {
+    //         app.instance().filterPosts
+    //     })
+    // });
+
     describe('render', () => {
         it('render `Header` component', () => {
             expect(app.find('Header').exists()).toBe(true);
         });
 
         it('renders `.all-posts` section', () => {
-            expect(app.find('.all-posts').children().length).toBeGreaterThanOrEqual(1)
+            expect(app.find('.all-posts').children().length).toBeGreaterThanOrEqual(1);
+        });
+
+        it('renders `.my-posts` section', () => {
+            expect(app.find('.my-posts').children().length).toBeGreaterThanOrEqual(1);
         });
     });
 });

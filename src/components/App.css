@@ -1,0 +1,11 @@
+.app-body {
+    display: flex
+}
+
+.all-posts {
+    flex: 1
+}
+
+.my-posts {
+    flex: 1
+}

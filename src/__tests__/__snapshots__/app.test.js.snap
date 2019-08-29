@@ -2,19 +2,36 @@
 
 exports[`App renders correctly 1`] = `
 <div
-  className="App"
+  className="app"
 >
   <div>
     <h1>
       Posts Page
     </h1>
+    <input
+      className="input-filterPosts"
+      onChange={[Function]}
+      placeholder="Please select between 1 and 10"
+      value=""
+    />
   </div>
   <div
-    className="all-posts"
+    className="app-body"
   >
-    <h1>
-      All posts
-    </h1>
+    <div
+      className="all-posts"
+    >
+      <h2>
+        All posts
+      </h2>
+    </div>
+    <div
+      className="my-posts"
+    >
+      <h2>
+        My posts
+      </h2>
+    </div>
   </div>
 </div>
 `;
