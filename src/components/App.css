@@ -1,11 +1,23 @@
+.app {
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+}
+
 .app-body {
-    display: flex
+    display: flex;
+}
+
+.app-body h2 {
+    text-align: center;
 }
 
 .all-posts {
-    flex: 1
+    flex: 1;
+    margin: 10px;
 }
 
 .my-posts {
-    flex: 1
+    flex: 1;
+    margin: 10px;
 }

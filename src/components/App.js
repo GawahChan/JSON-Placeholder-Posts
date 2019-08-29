@@ -23,13 +23,13 @@ class App extends Component {
 
     filterPosts = (inputValue) => {
         const myPost = this.state.posts.filter(post => post.userId === Number(inputValue));
-        this.setState({ inputValue,  myPost })
+        this.setState({ inputValue, myPost })
     };
 
     render() {
         return (
             <div className='app'>
-                <Header title='Posts Page' inputValue={this.state.inputValue} filterPosts={this.filterPosts}/>
+                <Header title='Posts Page' inputValue={this.state.inputValue} filterPosts={this.filterPosts} />
                 <div className='app-body'>
                     <div className='all-posts'>
                         <h2>All posts</h2>

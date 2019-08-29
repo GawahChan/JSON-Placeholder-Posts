@@ -10,12 +10,10 @@ exports[`Posts renders correctly 1`] = `
     <h3>
        #
     </h3>
-    <button
-      className="btn-showPosts"
+    <div
+      className="btn-showPosts down"
       onClick={[Function]}
-    >
-      Show post
-    </button>
+    />
   </div>
 </div>
 `;

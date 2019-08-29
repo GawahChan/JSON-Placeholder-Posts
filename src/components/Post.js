@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Post.css';
 
 class Post extends Component {
     constructor(props) {
@@ -17,7 +18,9 @@ class Post extends Component {
             <div className='post'>
                 <div className='post-title'>
                     <h3>{postTitle} #{this.props.postId}</h3>
-                    <button className='btn-showPosts' onClick={this.togglePosts}>Show post</button>
+                    <div className={`btn-showPosts ${this.state.showPost ? 'up' : 'down'}`}
+                        onClick={this.togglePosts}
+                    />
                 </div>
                 {
                     this.state.showPost &&
