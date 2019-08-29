@@ -14,15 +14,15 @@ describe('App', () => {
     });
 
     it('initialises state `posts` with an empty array', () => {
-        expect(app.state().posts).toEqual([]);
+        expect(app.state('posts')).toEqual([]);
     });
 
     it('initialises state `myPost` with an empty array', () => {
-        expect(app.state().myPost).toEqual([]);
+        expect(app.state('myPost')).toEqual([]);
     });
 
     it('initialises state `inputValue` with an empty string', () => {
-        expect(app.state().inputValue).toEqual('');
+        expect(app.state('inputValue')).toEqual('');
     });
 
     describe('componentDidMount', () => {
@@ -48,22 +48,38 @@ describe('App', () => {
                 })
                 .then(posts => {
                     app.setState({ posts })
-                    expect(app.state().posts).toEqual(posts);
+                    expect(app.state('posts')).toEqual(posts);
                     expect(app.find('Post').exists()).toBe(true);
                 });
         });
     });
 
-    // describe('filterPosts()', () => {
+    describe("filterPosts", () => {
+        const instance = app.instance();
+        const mockInputValue = 1;
+        const mockPost1 = {userId: 1, id: 1, title: 'Mock Title 1', body: 'Mock Body 1'};
+        const mockPost2 = {userId: 3, id: 2, title: 'Mock Title 2', body: 'Mock Body 2'};
 
-    //     it('checks if function is defined', () => {
-    //         expect(app.instance().filterPosts).toBeDefined();
-    //     });
+        beforeEach(() => {
+            jest.spyOn(instance, 'filterPosts');
+            instance.filterPosts(mockInputValue);
+            app.setState({ posts: [mockPost1, mockPost2]});
+        });
+      
+        it("calls function with given input value", () => {
+          expect(instance.filterPosts).toHaveBeenCalledWith(1);
+        });
+      
+        it("sets the inputValue state attribute to the mockInputValue", () => {
+            expect(app.state("inputValue")).toEqual(1);
+        });
+      
+        it("sets myPost to the filtered array of posts", () => {
+          expect(app.state("myPost")).toEqual([mockPost1]);
+        });
+      });
 
-    //     it('test,', () => {
-    //         app.instance().filterPosts
-    //     })
-    // });
+
 
     describe('render', () => {
         it('render `Header` component', () => {
