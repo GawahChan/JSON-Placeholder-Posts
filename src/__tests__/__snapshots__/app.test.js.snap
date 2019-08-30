@@ -33,7 +33,7 @@ exports[`App renders correctly 1`] = `
           All Posts
         </h2>
         <div
-          className="btn-showPosts down"
+          className="btn-displayPosts down"
           onClick={[Function]}
         />
       </div>
@@ -48,7 +48,7 @@ exports[`App renders correctly 1`] = `
           My Posts
         </h2>
         <div
-          className="btn-showPosts up"
+          className="btn-displayPosts up"
           onClick={[Function]}
         />
       </div>

@@ -5,7 +5,7 @@ function SubTitle(props) {
     return (
         <div className='subTitle'>
             <h2>{props.title}</h2>
-            <div className={`btn-showPosts ${props.display ? 'up' : 'down'}`}
+            <div className={`btn-displayPosts ${props.display ? 'up' : 'down'}`}
                 onClick={props.toggleDisplay}
             />
         </div>

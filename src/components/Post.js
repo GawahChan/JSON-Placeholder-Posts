@@ -5,11 +5,11 @@ class Post extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            showPost: false
+            showPostBody: false
         }
     }
     togglePosts = () => {
-        this.setState({ showPost: !this.state.showPost });
+        this.setState({ showPostBody: !this.state.showPostBody });
     }
 
     render() {
@@ -18,12 +18,12 @@ class Post extends Component {
             <div className='post'>
                 <div className='post-title'>
                     <h3>{postTitle}</h3>
-                    <div className={`btn-showPosts ${this.state.showPost ? 'up' : 'down'}`}
+                    <div className={`btn-showPostBody ${this.state.showPostBody ? 'up' : 'down'}`}
                         onClick={this.togglePosts}
                     />
                 </div>
                 {
-                    this.state.showPost &&
+                    this.state.showPostBody &&
                     <div className='post-body'>
                         <p>{postBody}</p>
                         <p>Posted by user: {userId}</p>

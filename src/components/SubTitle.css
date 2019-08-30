@@ -14,7 +14,7 @@
     color: #DDDDDD
 }
 
-.btn-showPosts {
+.btn-displayPosts {
     width: 0; 
     height: 0; 
     border-left: 8px solid transparent;
@@ -22,12 +22,12 @@
     cursor: pointer;
 }
 
-.btn-showPosts.up{
+.btn-displayPosts.up{
     border-top: none;
     border-bottom: 8px solid #DDDDDD;
 }
 
-.btn-showPosts.down {
+.btn-displayPosts.down {
     border-top: 8px solid #dddddd;
     border-bottom: none;
 }

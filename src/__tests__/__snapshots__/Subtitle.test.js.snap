@@ -6,7 +6,7 @@ exports[`SubTitle renders correctly 1`] = `
 >
   <h2 />
   <div
-    className="btn-showPosts down"
+    className="btn-displayPosts down"
   />
 </div>
 `;

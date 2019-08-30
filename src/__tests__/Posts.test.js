@@ -11,28 +11,28 @@ describe('Posts', () => {
         expect(postTree).toMatchSnapshot();
     });
 
-    it('initialises state `showPosts` with false', () => {
-        expect(post.state().showPost).toBe(false);
+    it('initialises state `showPostBody` with false', () => {
+        expect(post.state('showPostBody')).toBe(false);
     });
 
     describe('toggle display for posts', () => {
         beforeEach(() => {
-            post.find('.btn-showPosts').simulate('click');
+            post.find('.btn-showPostBody').simulate('click');
         });
         afterEach(() => {
-            post.setState({showPost: false});
+            post.setState({showPostBody: false});
         });
-        it('sets state `showPost` to true from clicking button once', () => {
-            expect(post.state().showPost).toBe(true);
+        it('sets state `showPostBody` to true from clicking button once', () => {
+            expect(post.state('showPostBody')).toBe(true);
         });
-        it('sets state `showPost` to true from clicking button twice', () => {
-            expect(post.state().showPost).toBe(true);
-            post.find('.btn-showPosts').simulate('click');
-            expect(post.state().showPost).toBe(false);
+        it('sets state `showPostBody` to true from clicking button twice', () => {
+            expect(post.state('showPostBody')).toBe(true);
+            post.find('.btn-showPostBody').simulate('click');
+            expect(post.state('showPostBody')).toBe(false);
         });
         it('checks if posts in <div className=`post-body` /> is rendered', () => {
             expect(post.find('.post-body').exists()).toBe(true);
-            post.find('.btn-showPosts').simulate('click');
+            post.find('.btn-showPostBody').simulate('click');
             expect(post.find('.post-body').exists()).toBe(false);
         });
     });
