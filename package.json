@@ -1,8 +1,8 @@
 {
   "name": "orbitx-posts-page",
   "version": "0.1.0",
-  "homepage": "https://gawahchan.github.io/OrbitX-Posts-Page",
   "private": true,
+  "homepage": "https://GawahChan.github.io/OrbitX-Post-Page",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.9.0",
