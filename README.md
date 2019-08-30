@@ -1,3 +1,11 @@
+## About
+Test for OrbitX <br>
+Created this webpage using React.js. <br>
+Fully tested with TDD and BDD using Jest and enzyme <br>
+<br>
+This app is deployed to github pages: https://gawahchan.github.io/OrbitX-Post-Page/
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
