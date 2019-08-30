@@ -17,7 +17,7 @@ class Post extends Component {
         return (
             <div className='post'>
                 <div className='post-title'>
-                    <h3>{postTitle} #{this.props.postId}</h3>
+                    <h3>{postTitle}</h3>
                     <div className={`btn-showPosts ${this.state.showPost ? 'up' : 'down'}`}
                         onClick={this.togglePosts}
                     />
@@ -27,6 +27,7 @@ class Post extends Component {
                     <div className='post-body'>
                         <p>{postBody}</p>
                         <p>Posted by user: {userId}</p>
+                        <p>Reference number:  {this.props.postId}</p>
                     </div>
                 }
             </div>

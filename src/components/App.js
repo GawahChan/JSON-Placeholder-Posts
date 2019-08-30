@@ -29,10 +29,10 @@ class App extends Component {
     render() {
         return (
             <div className='app'>
-                <Header title='Posts Page' inputValue={this.state.inputValue} filterPosts={this.filterPosts} />
+                <Header title='OrbitX Posts Page' inputValue={this.state.inputValue} filterPosts={this.filterPosts} />
                 <div className='app-body'>
                     <div className='all-posts'>
-                        <h2>All posts</h2>
+                        <h2>All Posts</h2>
                         {
                             this.state.posts.map(post => {
                                 return (
@@ -48,7 +48,7 @@ class App extends Component {
                         }
                     </div>
                     <div className='my-posts'>
-                        <h2>My posts</h2>
+                        <h2>My Posts</h2>
                         {
                             this.state.myPost.map(post => {
                                 return (

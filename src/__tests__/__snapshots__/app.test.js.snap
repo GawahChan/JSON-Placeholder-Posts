@@ -4,16 +4,21 @@ exports[`App renders correctly 1`] = `
 <div
   className="app"
 >
-  <div>
+  <div
+    className="header"
+  >
     <h1>
-      Posts Page
+      OrbitX Posts Page
     </h1>
-    <input
-      className="input-filterPosts"
-      onChange={[Function]}
-      placeholder="Please select between 1 and 10"
-      value=""
-    />
+    <h3>
+      My ID:
+      <input
+        className="input-filterPosts"
+        onChange={[Function]}
+        placeholder="Please select between 1 and 10"
+        value=""
+      />
+    </h3>
   </div>
   <div
     className="app-body"
@@ -22,14 +27,14 @@ exports[`App renders correctly 1`] = `
       className="all-posts"
     >
       <h2>
-        All posts
+        All Posts
       </h2>
     </div>
     <div
       className="my-posts"
     >
       <h2>
-        My posts
+        My Posts
       </h2>
     </div>
   </div>

@@ -1,0 +1,20 @@
+.header {
+    text-align: center;
+    background-color: #415E7B;
+    padding: 1rem 1rem;
+    color: #DDDDDD;
+}
+
+.header h1 {
+    font-weight: 400;
+}
+
+.header h3 {
+    font-weight: 400;
+}
+
+.input-filterPosts {
+    margin-left: 0.5rem;
+    padding: 10px;
+    width: 200px;
+}

@@ -1,14 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header renders correctly 1`] = `
-<div>
+<div
+  className="header"
+>
   <h1>
     Posts Page
   </h1>
-  <input
-    className="input-filterPosts"
-    onChange={[Function]}
-    placeholder="Please select between 1 and 10"
-  />
+  <h3>
+    My ID:
+    <input
+      className="input-filterPosts"
+      onChange={[Function]}
+      placeholder="Please select between 1 and 10"
+    />
+  </h3>
 </div>
 `;

@@ -7,9 +7,7 @@ exports[`Posts renders correctly 1`] = `
   <div
     className="post-title"
   >
-    <h3>
-       #
-    </h3>
+    <h3 />
     <div
       className="btn-showPosts down"
       onClick={[Function]}
