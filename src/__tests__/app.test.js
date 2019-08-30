@@ -25,6 +25,14 @@ describe('App', () => {
         expect(app.state('inputValue')).toEqual('');
     });
 
+    it('initialises state `displayAllPosts` with boolean false', () => {
+        expect(app.state('displayAllPosts')).toEqual(false);
+    });
+
+    it('initialises state `displayMyPosts` with boolean true', () => {
+        expect(app.state('displayMyPosts')).toEqual(true);
+    });
+
     describe('componentDidMount', () => {
         const spy = jest.spyOn(App.prototype, 'componentDidMount');
 
@@ -49,7 +57,6 @@ describe('App', () => {
                 .then(posts => {
                     app.setState({ posts })
                     expect(app.state('posts')).toEqual(posts);
-                    expect(app.find('Post').exists()).toBe(true);
                 });
         });
     });
@@ -78,6 +85,40 @@ describe('App', () => {
           expect(app.state("myPost")).toEqual([mockPost1]);
         });
       });
+
+      describe('toggleDisplayAllPosts()', () => {
+            const instance = app.instance();
+          beforeEach(() => {
+            instance.toggleDisplayAllPosts();
+          });
+          afterEach(() => {
+              app.setState({ displayAllPosts: false });
+          });
+          it('Changes state `displayAllPosts` to true after first click', () => {
+              expect(app.state('displayAllPosts')).toEqual(true);
+          });
+          it('Changes state `displayAllPosts` to false after two clicks', () => {
+            instance.toggleDisplayAllPosts();
+            expect(app.state('displayAllPosts')).toEqual(false);
+          });
+      });
+
+      describe('toggleDisplayMyPosts()', () => {
+          const instance = app.instance();
+        beforeEach(() => {
+            instance.toggleDisplayMyPosts();
+        });
+        afterEach(() => {
+            app.setState({ displayMyPosts: true });
+        });
+        it('Changes state `displayMyPosts` to false after first click', () => {
+            expect(app.state('displayMyPosts')).toEqual(false);
+        });
+        it('Changes state `displayMyPosts` to true after two clicks', () => {
+            instance.toggleDisplayMyPosts();
+            expect(app.state('displayMyPosts')).toEqual(true);
+        });
+      })
 
 
 

@@ -26,16 +26,32 @@ exports[`App renders correctly 1`] = `
     <div
       className="all-posts"
     >
-      <h2>
-        All Posts
-      </h2>
+      <div
+        className="subTitle"
+      >
+        <h2>
+          All Posts
+        </h2>
+        <div
+          className="btn-showPosts down"
+          onClick={[Function]}
+        />
+      </div>
     </div>
     <div
       className="my-posts"
     >
-      <h2>
-        My Posts
-      </h2>
+      <div
+        className="subTitle"
+      >
+        <h2>
+          My Posts
+        </h2>
+        <div
+          className="btn-showPosts up"
+          onClick={[Function]}
+        />
+      </div>
     </div>
   </div>
 </div>

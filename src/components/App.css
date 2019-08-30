@@ -9,15 +9,6 @@
     padding: 2rem 1rem;
 }
 
-.app-body h2 {
-    text-align: center;
-    border: 1px solid #DDDDDD;
-    padding: 5px;
-    background-color: #6868C5;
-    font-weight: 400;
-    color: #DDDDDD
-}
-
 .all-posts {
     flex: 1;
     padding: 10px;
