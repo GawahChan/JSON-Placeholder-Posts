@@ -41,7 +41,7 @@ class App extends Component {
     render() {
         return (
             <div className='app'>
-                <Header title='OrbitX Posts Page' inputValue={this.state.inputValue} filterPosts={this.filterPosts} />
+                <Header title='JSON-Placeholder Posts' inputValue={this.state.inputValue} filterPosts={this.filterPosts} />
                 <div className='app-body'>
                     <div className='all-posts'>
                         <SubTitle title='All Posts' display={this.state.displayAllPosts} toggleDisplay={this.toggleDisplayAllPosts} />
