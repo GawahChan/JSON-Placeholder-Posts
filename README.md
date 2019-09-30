@@ -1,9 +1,10 @@
 ## About
-Test for OrbitX <br>
+Redefining what it means to show fake news<br>
 Created this webpage using React.js. <br>
 Fully tested with TDD and BDD using Jest and enzyme <br>
 <br>
-This app is deployed to github pages: https://gawahchan.github.io/OrbitX-Post-Page/
+
+This app is using data from: [JSON Placeholder](https://jsonplaceholder.typicode.com/)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
