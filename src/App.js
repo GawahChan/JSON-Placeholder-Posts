@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import Post from './Post';
-import SubTitle from './SubTitle';
-import fetchData from '../helpers/fetchData';
+import Header from './components/Header';
+import Post from './components/Post';
+import SubTitle from './components/SubTitle';
+import fetchData from './helpers/fetchData';
+import inputs from './helpers/inputs';
 
 
 import './App.css';
@@ -26,7 +27,14 @@ class App extends Component {
     }
 
     filterPosts = (inputValue) => {
-        const myPost = this.state.posts.filter(post => post.userId === Number(inputValue));
+        const myPost = [];
+        const input = inputs(inputValue);
+        this.state.posts.filter(post => {
+            return input.map(number => {
+                return post.userId === number ? myPost.push(post) : null
+            });
+        });
+        console.log("myPost", myPost);
         this.setState({ inputValue, myPost })
     };
 
