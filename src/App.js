@@ -30,11 +30,10 @@ class App extends Component {
         const myPost = [];
         const input = inputs(inputValue);
         this.state.posts.filter(post => {
-            return input.map(number => {
+            return input.forEach(number => {
                 return post.userId === number ? myPost.push(post) : null
             });
         });
-        console.log("myPost", myPost);
         this.setState({ inputValue, myPost })
     };
 
